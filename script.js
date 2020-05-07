@@ -1,11 +1,10 @@
-window.addEventListener("load", () =>{
-    const sounds = document.querySelectorAll(".sound");
-    const pads = document.querySelectorAll(".pads div");
+const sounds = document.querySelectorAll(".sound");
+const pads = document.querySelectorAll(".pads div");
+const keyboard = ['a', 's','d','f','g','h','j']
 
-    pads.forEach((pad, index) => {
+pads.forEach((pad, index) => {
         pad.addEventListener('click', function(){
             sounds[index].currentTime = 0;
             sounds[index].play();
-        })
+        })  
     });
-});
